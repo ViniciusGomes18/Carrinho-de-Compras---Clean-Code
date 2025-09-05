@@ -27,9 +27,17 @@
 ----
 ## 🚧 Casos de Uso
 **Caso 1 - Usuário adiciona produto válido** 
-- Entrada: $carrinho->addProduct(1, 2);
+- Entrada: produto id = 1, quantidade = 2
 - Resultado esperado: O produto é adicionado ao carrinho e o estoque é reduzido
 
 **Caso 2 - Usuário adiciona além do estoque** 
-- Entrada: $carrinho->addProduct(3, 10);
-- Resultado esperado: Mensagem de erro 
+- Entrada: produto id = 3, quantidade = 10
+- Resultado esperado: Mensagem de erro "Estoque insuficiente"
+
+**Caso 3 - Usuário remove um produto do carrinho**
+- Entrada: produto id = 1;
+- Resultado esperado: O produto é removido do carrinho e o estoque volta ao valor original
+
+**Caso 4 - Aplicando o cupom de desconto**
+- Entrada: cupom DESCONTO10
+- Resultado esperado: O valor total da compra final é reduzida em 10%
